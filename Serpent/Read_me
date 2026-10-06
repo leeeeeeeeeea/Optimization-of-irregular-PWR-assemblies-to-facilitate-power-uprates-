@@ -1,0 +1,40 @@
+Serpent (1/8th assembly, Lea's subchannels) 
+These files need to be in one single folder 
+
+get_pins.py 
+ 
+Serpent input generator :  
+BL324_1_8_maker.py 
+ 
+Serpent input and output after running the code : 
+BL324_1_8 
+BL324_1_8_res.m 
+BL324_1_8.out 
+ 
+Heatmap (get pin powers out) : 
+heat_map.py 
+ 
+Cobra (generating input, example input and output, reading output):  
+cobra_smallopti.py 
+cobra_out.py 
+INPFILE 
+OUTFILE 
+ 
+A code to call for a Serpent run alone and write down the results in a file 
+master_bigSerpRun.py 
+And the results for BL324 with a large number of particles :  
+Serpent for BL324.txt 
+ 
+ Now for the optimization.  
+Simple Serpent :  
+master_opti_skopt_tests.py  
+master_opti_skopt_sequential.py 
+master_opti_skopt_simult.py 
+ 
+MDNBR optimization : 
+master_opti_MDNBR_simult.py 
+Optimized assembly simult MDNBR.txt The result 
+master_opti_MDNBR_simult_READER.py Trying to see how good the result it  
+ 
+Testing WIMS optimization results with Serpent : 
+Test_WIMS_opti_full_result.py 
