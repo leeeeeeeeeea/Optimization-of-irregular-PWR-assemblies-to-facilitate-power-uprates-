@@ -1,7 +1,5 @@
 # Optimization-of-irregular-PWR-assemblies-to-facilitate-power-uprates-
-Optimization of the position of pins in an irregular assembly using Serpent and WIMS (determinist code) for neutronics and Cobra for thermodraulics
-
-! There are other ‘Read me’s in the subfolders Serpent and WIMS. Do reference to these for the files architecture and their function.
+This is a master's project for a masters in nuclear engineering from the University of Cambridge. I have worked on of the position of pins in an irregular assembly using Serpent and WIMS (determinist code) for neutronics and Cobra for thermodraulics
 
 The Cobra codes are taken mostly directly from Ben Lindley. In his repository you will also find codes for neutronics simulation using Open MC, which I have not used but could be of interest, as well as the original subchannels and pins list.Serpent and WIMS codes shown here were written by me, as were all the optimizations. 
  
