@@ -1,0 +1,388 @@
+set title "BL324 asembly" 
+set gcu -1 
+set cmm 0 
+set opti 4 
+
+% --- Define materials --- %
+mat fuel	-10.295 rgb 255 215 0 
+92235.09c	0.0495 
+92238.09c 	0.9505 
+8016.09c 	2 
+mat clad 	4.2982E-02 rgb 150 150 150 
+40000.06c	4.2982E-02 
+mat coolant	7.2216E-02 moder lwtr 1001 rgb 173 216 230
+ 1001.06c  5.061215E-02
+ 8016.06c  2.530608E-02 
+% thermal scattering library for H20 
+therm lwtr lwj3.11t 
+%Lattice 
+surf Sf_0 cyl 1.26 0 0.3696 
+surf Sv_0 cyl 1.26 0 0.3773 
+surf Sc_0 cyl 1.26 0 0.4287 
+cell Cf_0 U0 fuel -SA -Sf_0 
+cell Cv_0 U0 void -SA Sf_0 -Sv_0 
+cell Cc_0 U0 clad -SA Sv_0 -Sc_0
+surf Sf_1 cyl 2.52 0 0.3696 
+surf Sv_1 cyl 2.52 0 0.3773 
+surf Sc_1 cyl 2.52 0 0.4287 
+cell Cf_1 U0 fuel -SA -Sf_1 
+cell Cv_1 U0 void -SA Sf_1 -Sv_1 
+cell Cc_1 U0 clad -SA Sv_1 -Sc_1
+surf Sf_2 cyl 5.04 0 0.3696 
+surf Sv_2 cyl 5.04 0 0.3773 
+surf Sc_2 cyl 5.04 0 0.4287 
+cell Cf_2 U0 fuel -SA -Sf_2 
+cell Cv_2 U0 void -SA Sf_2 -Sv_2 
+cell Cc_2 U0 clad -SA Sv_2 -Sc_2
+surf Sf_3 cyl 6.3 0 0.3696 
+surf Sv_3 cyl 6.3 0 0.3773 
+surf Sc_3 cyl 6.3 0 0.4287 
+cell Cf_3 U0 fuel -SA -Sf_3 
+cell Cv_3 U0 void -SA Sf_3 -Sv_3 
+cell Cc_3 U0 clad -SA Sv_3 -Sc_3
+surf Sf_4 cyl 9.018947368421053 0.0 0.3696 
+surf Sv_4 cyl 9.018947368421053 0.0 0.3773 
+surf Sc_4 cyl 9.018947368421053 0.0 0.4287 
+cell Cf_4 U0 fuel -SA -Sf_4 
+cell Cv_4 U0 void -SA Sf_4 -Sv_4 
+cell Cc_4 U0 clad -SA Sv_4 -Sc_4
+surf Sf_5 cyl 10.146315789473684 0.0 0.3696 
+surf Sv_5 cyl 10.146315789473684 0.0 0.3773 
+surf Sc_5 cyl 10.146315789473684 0.0 0.4287 
+cell Cf_5 U0 fuel -SA -Sf_5 
+cell Cv_5 U0 void -SA Sf_5 -Sv_5 
+cell Cc_5 U0 clad -SA Sv_5 -Sc_5
+surf Sf_6 cyl 9.01943751 1.12742969 0.3696 
+surf Sv_6 cyl 9.01943751 1.12742969 0.3773 
+surf Sc_6 cyl 9.01943751 1.12742969 0.4287 
+cell Cf_6 U0 fuel -SA -Sf_6 
+cell Cv_6 U0 void -SA Sf_6 -Sv_6 
+cell Cc_6 U0 clad -SA Sv_6 -Sc_6
+surf Sf_7 cyl 10.146315789473684 1.1273684210526316 0.3696 
+surf Sv_7 cyl 10.146315789473684 1.1273684210526316 0.3773 
+surf Sc_7 cyl 10.146315789473684 1.1273684210526316 0.4287 
+cell Cf_7 U0 fuel -SA -Sf_7 
+cell Cv_7 U0 void -SA Sf_7 -Sv_7 
+cell Cc_7 U0 clad -SA Sv_7 -Sc_7
+surf Sf_8 cyl 9.01943751 2.25485938 0.3696 
+surf Sv_8 cyl 9.01943751 2.25485938 0.3773 
+surf Sc_8 cyl 9.01943751 2.25485938 0.4287 
+cell Cf_8 U0 fuel -SA -Sf_8 
+cell Cv_8 U0 void -SA Sf_8 -Sv_8 
+cell Cc_8 U0 clad -SA Sv_8 -Sc_8
+surf Sf_9 cyl 10.146315789473684 2.254736842105263 0.3696 
+surf Sv_9 cyl 10.146315789473684 2.254736842105263 0.3773 
+surf Sc_9 cyl 10.146315789473684 2.254736842105263 0.4287 
+cell Cf_9 U0 fuel -SA -Sf_9 
+cell Cv_9 U0 void -SA Sf_9 -Sv_9 
+cell Cc_9 U0 clad -SA Sv_9 -Sc_9
+surf Sf_10 cyl 9.01943751 3.38228907 0.3696 
+surf Sv_10 cyl 9.01943751 3.38228907 0.3773 
+surf Sc_10 cyl 9.01943751 3.38228907 0.4287 
+cell Cf_10 U0 fuel -SA -Sf_10 
+cell Cv_10 U0 void -SA Sf_10 -Sv_10 
+cell Cc_10 U0 clad -SA Sv_10 -Sc_10
+surf Sf_11 cyl 10.146315789473684 3.3821052631578947 0.3696 
+surf Sv_11 cyl 10.146315789473684 3.3821052631578947 0.3773 
+surf Sc_11 cyl 10.146315789473684 3.3821052631578947 0.4287 
+cell Cf_11 U0 fuel -SA -Sf_11 
+cell Cv_11 U0 void -SA Sf_11 -Sv_11 
+cell Cc_11 U0 clad -SA Sv_11 -Sc_11
+surf Sf_12 cyl 9.01943751 4.50971876 0.3696 
+surf Sv_12 cyl 9.01943751 4.50971876 0.3773 
+surf Sc_12 cyl 9.01943751 4.50971876 0.4287 
+cell Cf_12 U0 fuel -SA -Sf_12 
+cell Cv_12 U0 void -SA Sf_12 -Sv_12 
+cell Cc_12 U0 clad -SA Sv_12 -Sc_12
+surf Sf_13 cyl 10.146315789473684 4.509473684210526 0.3696 
+surf Sv_13 cyl 10.146315789473684 4.509473684210526 0.3773 
+surf Sc_13 cyl 10.146315789473684 4.509473684210526 0.4287 
+cell Cf_13 U0 fuel -SA -Sf_13 
+cell Cv_13 U0 void -SA Sf_13 -Sv_13 
+cell Cc_13 U0 clad -SA Sv_13 -Sc_13
+surf Sf_14 cyl 9.01943751 5.63714844 0.3696 
+surf Sv_14 cyl 9.01943751 5.63714844 0.3773 
+surf Sc_14 cyl 9.01943751 5.63714844 0.4287 
+cell Cf_14 U0 fuel -SA -Sf_14 
+cell Cv_14 U0 void -SA Sf_14 -Sv_14 
+cell Cc_14 U0 clad -SA Sv_14 -Sc_14
+surf Sf_15 cyl 10.146315789473684 5.636842105263158 0.3696 
+surf Sv_15 cyl 10.146315789473684 5.636842105263158 0.3773 
+surf Sc_15 cyl 10.146315789473684 5.636842105263158 0.4287 
+cell Cf_15 U0 fuel -SA -Sf_15 
+cell Cv_15 U0 void -SA Sf_15 -Sv_15 
+cell Cc_15 U0 clad -SA Sv_15 -Sc_15
+surf Sf_16 cyl 9.01943751 6.76457813 0.3696 
+surf Sv_16 cyl 9.01943751 6.76457813 0.3773 
+surf Sc_16 cyl 9.01943751 6.76457813 0.4287 
+cell Cf_16 U0 fuel -SA -Sf_16 
+cell Cv_16 U0 void -SA Sf_16 -Sv_16 
+cell Cc_16 U0 clad -SA Sv_16 -Sc_16
+surf Sf_17 cyl 10.146315789473684 6.7642105263157895 0.3696 
+surf Sv_17 cyl 10.146315789473684 6.7642105263157895 0.3773 
+surf Sc_17 cyl 10.146315789473684 6.7642105263157895 0.4287 
+cell Cf_17 U0 fuel -SA -Sf_17 
+cell Cv_17 U0 void -SA Sf_17 -Sv_17 
+cell Cc_17 U0 clad -SA Sv_17 -Sc_17
+surf Sf_18 cyl 9.01943751 7.89200782 0.3696 
+surf Sv_18 cyl 9.01943751 7.89200782 0.3773 
+surf Sc_18 cyl 9.01943751 7.89200782 0.4287 
+cell Cf_18 U0 fuel -SA -Sf_18 
+cell Cv_18 U0 void -SA Sf_18 -Sv_18 
+cell Cc_18 U0 clad -SA Sv_18 -Sc_18
+surf Sf_19 cyl 10.146315789473684 7.891578947368421 0.3696 
+surf Sv_19 cyl 10.146315789473684 7.891578947368421 0.3773 
+surf Sc_19 cyl 10.146315789473684 7.891578947368421 0.4287 
+cell Cf_19 U0 fuel -SA -Sf_19 
+cell Cv_19 U0 void -SA Sf_19 -Sv_19 
+cell Cc_19 U0 clad -SA Sv_19 -Sc_19
+surf Sf_20 cyl 9.01943751 9.01943751 0.3696 
+surf Sv_20 cyl 9.01943751 9.01943751 0.3773 
+surf Sc_20 cyl 9.01943751 9.01943751 0.4287 
+cell Cf_20 U0 fuel -SA -Sf_20 
+cell Cv_20 U0 void -SA Sf_20 -Sv_20 
+cell Cc_20 U0 clad -SA Sv_20 -Sc_20
+surf Sf_21 cyl 10.146315789473684 9.018947368421053 0.3696 
+surf Sv_21 cyl 10.146315789473684 9.018947368421053 0.3773 
+surf Sc_21 cyl 10.146315789473684 9.018947368421053 0.4287 
+cell Cf_21 U0 fuel -SA -Sf_21 
+cell Cv_21 U0 void -SA Sf_21 -Sv_21 
+cell Cc_21 U0 clad -SA Sv_21 -Sc_21
+surf Sf_22 cyl 10.146315789473684 10.146315789473684 0.3696 
+surf Sv_22 cyl 10.146315789473684 10.146315789473684 0.3773 
+surf Sc_22 cyl 10.146315789473684 10.146315789473684 0.4287 
+cell Cf_22 U0 fuel -SA -Sf_22 
+cell Cv_22 U0 void -SA Sf_22 -Sv_22 
+cell Cc_22 U0 clad -SA Sv_22 -Sc_22
+surf Sf_23 cyl 1.12742969 1.12742969 0.3696 
+surf Sv_23 cyl 1.12742969 1.12742969 0.3773 
+surf Sc_23 cyl 1.12742969 1.12742969 0.4287 
+cell Cf_23 U0 fuel -SA -Sf_23 
+cell Cv_23 U0 void -SA Sf_23 -Sv_23 
+cell Cc_23 U0 clad -SA Sv_23 -Sc_23
+surf Sf_24 cyl 2.25485938 1.12742969 0.3696 
+surf Sv_24 cyl 2.25485938 1.12742969 0.3773 
+surf Sc_24 cyl 2.25485938 1.12742969 0.4287 
+cell Cf_24 U0 fuel -SA -Sf_24 
+cell Cv_24 U0 void -SA Sf_24 -Sv_24 
+cell Cc_24 U0 clad -SA Sv_24 -Sc_24
+surf Sf_25 cyl 3.38228907 1.12742969 0.3696 
+surf Sv_25 cyl 3.38228907 1.12742969 0.3773 
+surf Sc_25 cyl 3.38228907 1.12742969 0.4287 
+cell Cf_25 U0 fuel -SA -Sf_25 
+cell Cv_25 U0 void -SA Sf_25 -Sv_25 
+cell Cc_25 U0 clad -SA Sv_25 -Sc_25
+surf Sf_26 cyl 4.50971876 1.12742969 0.3696 
+surf Sv_26 cyl 4.50971876 1.12742969 0.3773 
+surf Sc_26 cyl 4.50971876 1.12742969 0.4287 
+cell Cf_26 U0 fuel -SA -Sf_26 
+cell Cv_26 U0 void -SA Sf_26 -Sv_26 
+cell Cc_26 U0 clad -SA Sv_26 -Sc_26
+surf Sf_27 cyl 5.63714844 1.12742969 0.3696 
+surf Sv_27 cyl 5.63714844 1.12742969 0.3773 
+surf Sc_27 cyl 5.63714844 1.12742969 0.4287 
+cell Cf_27 U0 fuel -SA -Sf_27 
+cell Cv_27 U0 void -SA Sf_27 -Sv_27 
+cell Cc_27 U0 clad -SA Sv_27 -Sc_27
+surf Sf_28 cyl 6.76457813 1.12742969 0.3696 
+surf Sv_28 cyl 6.76457813 1.12742969 0.3773 
+surf Sc_28 cyl 6.76457813 1.12742969 0.4287 
+cell Cf_28 U0 fuel -SA -Sf_28 
+cell Cv_28 U0 void -SA Sf_28 -Sv_28 
+cell Cc_28 U0 clad -SA Sv_28 -Sc_28
+surf Sf_29 cyl 7.89189969 1.12742969 0.3696 
+surf Sv_29 cyl 7.89189969 1.12742969 0.3773 
+surf Sc_29 cyl 7.89189969 1.12742969 0.4287 
+cell Cf_29 U0 fuel -SA -Sf_29 
+cell Cv_29 U0 void -SA Sf_29 -Sv_29 
+cell Cc_29 U0 clad -SA Sv_29 -Sc_29
+surf Sf_30 cyl 2.25485938 2.25485938 0.3696 
+surf Sv_30 cyl 2.25485938 2.25485938 0.3773 
+surf Sc_30 cyl 2.25485938 2.25485938 0.4287 
+cell Cf_30 U0 fuel -SA -Sf_30 
+cell Cv_30 U0 void -SA Sf_30 -Sv_30 
+cell Cc_30 U0 clad -SA Sv_30 -Sc_30
+surf Sf_31 cyl 3.38228907 2.29713569 0.3696 
+surf Sv_31 cyl 3.38228907 2.29713569 0.3773 
+surf Sc_31 cyl 3.38228907 2.29713569 0.4287 
+cell Cf_31 U0 fuel -SA -Sf_31 
+cell Cv_31 U0 void -SA Sf_31 -Sv_31 
+cell Cc_31 U0 clad -SA Sv_31 -Sc_31
+surf Sf_32 cyl 4.50971876 2.25485938 0.3696 
+surf Sv_32 cyl 4.50971876 2.25485938 0.3773 
+surf Sc_32 cyl 4.50971876 2.25485938 0.4287 
+cell Cf_32 U0 fuel -SA -Sf_32 
+cell Cv_32 U0 void -SA Sf_32 -Sv_32 
+cell Cc_32 U0 clad -SA Sv_32 -Sc_32
+surf Sf_33 cyl 5.63714844 2.25485938 0.3696 
+surf Sv_33 cyl 5.63714844 2.25485938 0.3773 
+surf Sc_33 cyl 5.63714844 2.25485938 0.4287 
+cell Cf_33 U0 fuel -SA -Sf_33 
+cell Cv_33 U0 void -SA Sf_33 -Sv_33 
+cell Cc_33 U0 clad -SA Sv_33 -Sc_33
+surf Sf_34 cyl 6.76457813 2.25485938 0.3696 
+surf Sv_34 cyl 6.76457813 2.25485938 0.3773 
+surf Sc_34 cyl 6.76457813 2.25485938 0.4287 
+cell Cf_34 U0 fuel -SA -Sf_34 
+cell Cv_34 U0 void -SA Sf_34 -Sv_34 
+cell Cc_34 U0 clad -SA Sv_34 -Sc_34
+surf Sf_35 cyl 7.89200782 2.3112278 0.3696 
+surf Sv_35 cyl 7.89200782 2.3112278 0.3773 
+surf Sc_35 cyl 7.89200782 2.3112278 0.4287 
+cell Cf_35 U0 fuel -SA -Sf_35 
+cell Cv_35 U0 void -SA Sf_35 -Sv_35 
+cell Cc_35 U0 clad -SA Sv_35 -Sc_35
+surf Sf_36 cyl 8.11749376 5.0734336 0.3696 
+surf Sv_36 cyl 8.11749376 5.0734336 0.3773 
+surf Sc_36 cyl 8.11749376 5.0734336 0.4287 
+cell Cf_36 U0 fuel -SA -Sf_36 
+cell Cv_36 U0 void -SA Sf_36 -Sv_36 
+cell Cc_36 U0 clad -SA Sv_36 -Sc_36
+surf Sf_37 cyl 6.82094962 4.63705199 0.3696 
+surf Sv_37 cyl 6.82094962 4.63705199 0.3773 
+surf Sc_37 cyl 6.82094962 4.63705199 0.4287 
+cell Cf_37 U0 fuel -SA -Sf_37 
+cell Cv_37 U0 void -SA Sf_37 -Sv_37 
+cell Cc_37 U0 clad -SA Sv_37 -Sc_37
+surf Sf_38 cyl 7.89200782 7.89200782 0.3696 
+surf Sv_38 cyl 7.89200782 7.89200782 0.3773 
+surf Sc_38 cyl 7.89200782 7.89200782 0.4287 
+cell Cf_38 U0 fuel -SA -Sf_38 
+cell Cv_38 U0 void -SA Sf_38 -Sv_38 
+cell Cc_38 U0 clad -SA Sv_38 -Sc_38
+surf Sf_39 cyl 8.11749376 6.20086329 0.3696 
+surf Sv_39 cyl 8.11749376 6.20086329 0.3773 
+surf Sc_39 cyl 8.11749376 6.20086329 0.4287 
+cell Cf_39 U0 fuel -SA -Sf_39 
+cell Cv_39 U0 void -SA Sf_39 -Sv_39 
+cell Cc_39 U0 clad -SA Sv_39 -Sc_39
+surf Sf_40 cyl 7.12535563 7.12535563 0.3696 
+surf Sv_40 cyl 7.12535563 7.12535563 0.3773 
+surf Sc_40 cyl 7.12535563 7.12535563 0.4287 
+cell Cf_40 U0 fuel -SA -Sf_40 
+cell Cv_40 U0 void -SA Sf_40 -Sv_40 
+cell Cc_40 U0 clad -SA Sv_40 -Sc_40
+surf Sf_41 cyl 7.21555001 5.64580416 0.3696 
+surf Sv_41 cyl 7.21555001 5.64580416 0.3773 
+surf Sc_41 cyl 7.21555001 5.64580416 0.4287 
+cell Cf_41 U0 fuel -SA -Sf_41 
+cell Cv_41 U0 void -SA Sf_41 -Sv_41 
+cell Cc_41 U0 clad -SA Sv_41 -Sc_41
+surf Sf_42 cyl 5.0734336 3.15680313 0.3696 
+surf Sv_42 cyl 5.0734336 3.15680313 0.3773 
+surf Sc_42 cyl 5.0734336 3.15680313 0.4287 
+cell Cf_42 U0 fuel -SA -Sf_42 
+cell Cv_42 U0 void -SA Sf_42 -Sv_42 
+cell Cc_42 U0 clad -SA Sv_42 -Sc_42
+surf Sf_43 cyl 6.20086329 3.15680313 0.3696 
+surf Sv_43 cyl 6.20086329 3.15680313 0.3773 
+surf Sc_43 cyl 6.20086329 3.15680313 0.4287 
+cell Cf_43 U0 fuel -SA -Sf_43 
+cell Cv_43 U0 void -SA Sf_43 -Sv_43 
+cell Cc_43 U0 clad -SA Sv_43 -Sc_43
+surf Sf_44 cyl 5.63714844 4.05874688 0.3696 
+surf Sv_44 cyl 5.63714844 4.05874688 0.3773 
+surf Sc_44 cyl 5.63714844 4.05874688 0.4287 
+cell Cf_44 U0 fuel -SA -Sf_44 
+cell Cv_44 U0 void -SA Sf_44 -Sv_44 
+cell Cc_44 U0 clad -SA Sv_44 -Sc_44
+surf Sf_45 cyl 4.62246172 4.62246172 0.3696 
+surf Sv_45 cyl 4.62246172 4.62246172 0.3773 
+surf Sc_45 cyl 4.62246172 4.62246172 0.4287 
+cell Cf_45 U0 fuel -SA -Sf_45 
+cell Cv_45 U0 void -SA Sf_45 -Sv_45 
+cell Cc_45 U0 clad -SA Sv_45 -Sc_45
+surf Sf_46 cyl 5.86263438 5.11502799 0.3696 
+surf Sv_46 cyl 5.86263438 5.11502799 0.3773 
+surf Sc_46 cyl 5.86263438 5.11502799 0.4287 
+cell Cf_46 U0 fuel -SA -Sf_46 
+cell Cv_46 U0 void -SA Sf_46 -Sv_46 
+cell Cc_46 U0 clad -SA Sv_46 -Sc_46
+surf SGi_0 cyl 0 0 0.56 
+surf SGc_0 cyl 0 0 0.61 
+cell CGi_0 U0 coolant -SA -SGi_0 
+cell CGc_0 U0 clad -SA SGi_0 -SGc_0
+surf SGi_1 cyl 3.7800000000000002 3.7800000000000002 0.56 
+surf SGc_1 cyl 3.7800000000000002 3.7800000000000002 0.61 
+cell CGi_1 U0 coolant -SA -SGi_1 
+cell CGc_1 U0 clad -SA SGi_1 -SGc_1
+surf SGi_2 cyl 6.3 6.3 0.56 
+surf SGc_2 cyl 6.3 6.3 0.61 
+cell CGi_2 U0 coolant -SA -SGi_2 
+cell CGc_2 U0 clad -SA SGi_2 -SGc_2
+surf SGi_3 cyl 3.7800000000000002 0 0.56 
+surf SGc_3 cyl 3.7800000000000002 0 0.61 
+cell CGi_3 U0 coolant -SA -SGi_3 
+cell CGc_3 U0 clad -SA SGi_3 -SGc_3
+surf SGi_4 cyl 7.5600000000000005 0 0.56 
+surf SGc_4 cyl 7.5600000000000005 0 0.61 
+cell CGi_4 U0 coolant -SA -SGi_4 
+cell CGc_4 U0 clad -SA SGi_4 -SGc_4
+surf SGi_5 cyl 7.5600000000000005 3.7800000000000002 0.56 
+surf SGc_5 cyl 7.5600000000000005 3.7800000000000002 0.61 
+cell CGi_5 U0 coolant -SA -SGi_5 
+cell CGc_5 U0 clad -SA SGi_5 -SGc_5
+% Assembly 
+surf SA sqc 5.375 5.375 5.375 
+cell coolA U0 coolant -SA  Sc_0 Sc_1 Sc_2 Sc_3 Sc_4 Sc_5 Sc_6 Sc_7 Sc_8 Sc_9 Sc_10 Sc_11 Sc_12 Sc_13 Sc_14 Sc_15 Sc_16 Sc_17 Sc_18 Sc_19 Sc_20 Sc_21 Sc_22 Sc_23 Sc_24 Sc_25 Sc_26 Sc_27 Sc_28 Sc_29 Sc_30 Sc_31 Sc_32 Sc_33 Sc_34 Sc_35 Sc_36 Sc_37 Sc_38 Sc_39 Sc_40 Sc_41 Sc_42 Sc_43 Sc_44 Sc_45 Sc_46 SGc_0 SGc_1 SGc_2 SGc_3 SGc_4 SGc_5
+cell insideA 0 fill U0 -SA 
+cell outsideA 0 outside SA 
+set usym U0 3 2 0.0 0.0 0 45 
+% --- Neutron population and criticality cycles : 
+set pop 10000 1000 5  
+% --- Boundary conditions: 
+set bc 2 %reflective 
+% --- Normalisation: 
+set power 2212500.0 
+% --- Geometry and mesh plots:  
+plot 30 100 100  
+% --- Cross section library file path: 
+set acelib "/usr/software/mcnplib/SERPENT/XSdata_endfb7/sss_endfb7u.xsdata" 
+% --- Detectors for power of each pin 
+det D0 dr -8 void dc Cf_0 
+det D1 dr -8 void dc Cf_1 
+det D2 dr -8 void dc Cf_2 
+det D3 dr -8 void dc Cf_3 
+det D4 dr -8 void dc Cf_4 
+det D5 dr -8 void dc Cf_5 
+det D6 dr -8 void dc Cf_6 
+det D7 dr -8 void dc Cf_7 
+det D8 dr -8 void dc Cf_8 
+det D9 dr -8 void dc Cf_9 
+det D10 dr -8 void dc Cf_10 
+det D11 dr -8 void dc Cf_11 
+det D12 dr -8 void dc Cf_12 
+det D13 dr -8 void dc Cf_13 
+det D14 dr -8 void dc Cf_14 
+det D15 dr -8 void dc Cf_15 
+det D16 dr -8 void dc Cf_16 
+det D17 dr -8 void dc Cf_17 
+det D18 dr -8 void dc Cf_18 
+det D19 dr -8 void dc Cf_19 
+det D20 dr -8 void dc Cf_20 
+det D21 dr -8 void dc Cf_21 
+det D22 dr -8 void dc Cf_22 
+det D23 dr -8 void dc Cf_23 
+det D24 dr -8 void dc Cf_24 
+det D25 dr -8 void dc Cf_25 
+det D26 dr -8 void dc Cf_26 
+det D27 dr -8 void dc Cf_27 
+det D28 dr -8 void dc Cf_28 
+det D29 dr -8 void dc Cf_29 
+det D30 dr -8 void dc Cf_30 
+det D31 dr -8 void dc Cf_31 
+det D32 dr -8 void dc Cf_32 
+det D33 dr -8 void dc Cf_33 
+det D34 dr -8 void dc Cf_34 
+det D35 dr -8 void dc Cf_35 
+det D36 dr -8 void dc Cf_36 
+det D37 dr -8 void dc Cf_37 
+det D38 dr -8 void dc Cf_38 
+det D39 dr -8 void dc Cf_39 
+det D40 dr -8 void dc Cf_40 
+det D41 dr -8 void dc Cf_41 
+det D42 dr -8 void dc Cf_42 
+det D43 dr -8 void dc Cf_43 
+det D44 dr -8 void dc Cf_44 
+det D45 dr -8 void dc Cf_45 
+det D46 dr -8 void dc Cf_46 
