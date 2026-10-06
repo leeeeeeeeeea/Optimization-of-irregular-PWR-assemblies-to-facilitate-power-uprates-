@@ -1,0 +1,14 @@
+
+ANS=/usr/software/answers/
+
+wims10exec=/usr/software/answers/wims10a_ru0/exec/wims10a.out
+wimslibrary=/usr/software/answers/data_libraries/w10j312v1.dat
+
+# w10j31v1.dat
+# w10e70_beta1.dat
+
+export LM_LICENSE_FILE=@ray
+
+$wims10exec library=$wimslibrary input=input output=output space=500000000 FLATFILE=$1.FF
+
+ 

@@ -1,0 +1,532 @@
+          **********************************************************
+          **********************************************************
+          **********************************************************
+          ***                                                    ***
+          ***   ANSWERS PROGRAM                                  ***
+          ***   WIMS Version 10A Release Update 0                ***
+          ***   LINUX VERSION                                    ***
+          ***                                                    ***
+          **********************************************************
+          **********************************************************
+          **********************************************************
+
+
+
+          **********************************************************
+          * This is the ANSWERS QA Set version of the program.     *
+          *                                                        *
+          * This program has successfully executed the designated  *
+          * set of test cases on the ANSWERS QA Set computer       *
+          * systems.                                               *
+          **********************************************************
+
+
+
+          **********************************************************
+          * This computer program is supplied under licence by     *
+          * Energy, Safety and Risk Consultants (UK) Limited.      *
+          **********************************************************
+
+
+
+          **********************************************************
+          * Copyright Energy, Safety and Risk Consultants (UK)     *
+          * Limited, part of AMEC plc.                             *
+          *                                                        *
+          * All rights reserved. This computer program is          *
+          * protected by copyright law and international           *
+          * treaties.  Save as permitted under the Copyright       *
+          * Designs and Patents Act 1988, or the terms of any      *
+          * licence granted by the copyright owner, no part of     *
+          * this program may be used, reproduced, distributed or   *
+          * modified in any way.                                   *
+          *                                                        *
+          * Warning: Any unauthorised act, including reproduction  *
+          * or distribution of this program or any portion of it,  *
+          * may result in both a civil claim for damages and       *
+          * criminal prosecution.                                  *
+          **********************************************************
+
+
+
+
+          Running on machine ray.eng.cam.ac.uk (System : Linux Processor type :)
+
+          Date and time of execution: 08/07/2026 - 11.55.17
+
+
+
+
+
+          **********************************************************
+          *                                                        *
+          *            WIMS Version 10A Release Update 0           *
+          *            ---------------------------------           *
+          *                                                        *
+          *  This release corrects the following known errors:     *
+          *                                                        *
+          *  ANSWERS/WIMS/ERROR/055                                *
+          *  ANSWERS/WIMS/ERROR/056                                *
+          *  ANSWERS/WIMS/ERROR/057                                *
+          *  ANSWERS/WIMS/ERROR/059                                *
+          *  ANSWERS/WIMS/ERROR/060                                *
+          *  ANSWERS/WIMS/ERROR/061                                *
+          *  ANSWERS/WIMS/ERROR/062                                *
+          *  ANSWERS/WIMS/ERROR/064                                *
+          *  ANSWERS/WIMS/ERROR/065                                *
+          *  ANSWERS/WIMS/ERROR/066                                *
+          *  ANSWERS/WIMS/ERROR/067                                *
+          *  ANSWERS/WIMS/ERROR/068                                *
+          *  ANSWERS/WIMS/ERROR/069                                *
+          *  ANSWERS/WIMS/ERROR/070                                *
+          *                                                        *
+          *  There are no known errors in this release of the      *
+          *  code.                                                 *
+          *                                                        *
+          *  August 2014                                           *
+          *                                                        *
+          **********************************************************
+
+
+
+
+
+
+          **********************************************************
+            ANSWERS Software (FlexNet Publisher based) Licensing
+            Procedure (RU5) for Feature WIMS10A_RU0
+          **********************************************************
+
+
+
+          *** The timelock password has been successfully verified.   
+          *** This password expires at midnight on 30-sep-2026                 
+
+
+          *** Successful authorisation (reported by FlexNet Publisher) for system with:
+          ***     HOSTNAME=ray.eng.cam.ac.uk                                                           
+          ***     "f01fafe5e3ef f01fafe694d1"                                                           
+          ***     Ethernet address "f01fafe5e3ef f01fafe694d1"                                      
+          ***     USER=                                                       
+          ***     The number of processors detected is  16
+          ***     The number of processors permitted is 76
+
+          **********************************************************
+          * This is a licensed ANSWERS software product.           *
+          *                                                        *
+          * The use of this program is restricted within the terms *
+          * of your licence agreement with Energy, Safety and Risk *
+          * Consultants (UK) Limited.                              *
+          *                                                        *
+          * This copy is registered with identifier - 520CCC0401E0 *
+          ********************************************************** 
+
+
+          **********************************************************
+            End of ANSWERS Software Licensing Procedure (RU5)
+            for Feature WIMS10A_RU0
+          **********************************************************
+
+
+
+INPUT=input
+OUTPUT=output
+SPACE= 500000000
+FLATFILE=.FF
+LIBRARY=/usr/software/answers/data_libraries/w10j312v1.dat
+
+LIBRARY NAME IS  /usr/software/answers/data_libraries/w10j312v1.dat                                              
+ LIBRARY HISTORY IS 
+     WIMS10 LIBRARY -    JEFF3.1.2 VERSION 1 - JULY 2013                             
+INPUT:SETVAL temp = 293.0
+INPUT:SETVAL xmax = 10.75
+INPUT:HEAD 1
+
+CALLING HEAD(OUTPUT_INTERFACE_NO=  1)
+
+INPUT:uranium u235 4.0
+INPUT:material 1 density 10.4 temp 293.0 class   1
+INPUT:u 100.0
+INPUT:material 2 density 6.44 temp 293.0 class   2
+INPUT:zr 97.91 sn 1.59 fe 0.5
+INPUT:material 3 density 0.73 temp 293.0 class   3
+INPUT:h 11.19 o 88.81 b10 0.0148504 b11 0.0651496
+INPUT:xgrid 1  1.260000
+INPUT:ygrid 1  1.260000
+INPUT:map 1001  1 1  1 1
+INPUT:rodsub 1 1  0.377300  1
+INPUT:rodsub 1 2  0.428700  2
+INPUT:rodsub 1 3  0.000000  3
+INPUT:begin
+
+TIMING: Module: cpu           0.35 wall          0.36 Overall: cpu           0.38 wall          0.41
+====================================================================================================
+INPUT:PERSEUS 1
+
+CALLING PERSEUS(IN_INTERFACE_NO=  1)
+
+INPUT:xgrid 1  1.260000
+INPUT:ygrid 1  1.260000
+INPUT:map 1001  1 1  1 1
+INPUT:rodsub 1 1  0.377300  1
+INPUT:rodsub 1 2  0.428700  2
+INPUT:rodsub 1 3  0.000000  3
+INPUT:square
+INPUT:begin
+
+TIMING: Module: cpu           1.24 wall          1.97 Overall: cpu           1.62 wall          2.38
+====================================================================================================
+INPUT:PIP 1
+
+CALLING PIP(IN_INTERFACE_NO=  1)
+
+INPUT:niter 10
+INPUT:begin
+Calculation converged in   7 iterations
+k-infinity is 1.325634
+
+TIMING: Module: cpu           0.02 wall          0.02 Overall: cpu           1.64 wall          2.40
+====================================================================================================
+INPUT:COND 1 2
+
+CALLING CONDENSE_INTERFACE(IN_INTERFACE_NO=  1,OUT_INTERFACE_NO=  2)
+
+INPUT:partition 22 45 92 135 152 172
+INPUT:cond 1 1 material 1
+INPUT:cond 2 2 material 2
+INPUT:cond 3 3 material 3
+INPUT:cond 4 3 material 3
+INPUT:begin
+
+TIMING: Module: cpu           0.00 wall          0.00 Overall: cpu           1.64 wall          2.40
+====================================================================================================
+INPUT:CACTUS 2  * reads condensed 6-group XS from interface 2 (written by COND)
+
+CALLING CACTUS(IN_INTERFACE_NO=  2)
+
+INPUT:geomin
+INPUT:DIAG
+INPUT:dimension   10.75  10.75
+INPUT:nodes
+INPUT:0.0     0.0
+INPUT:10.75    0.0
+INPUT:10.75    10.75
+INPUT:edges
+INPUT:1  2
+INPUT:2  3
+INPUT:3  1
+INPUT:elements
+INPUT:1  2  3
+INPUT:split
+INPUT:0   1.260000   0.000000     0.369600  0.377300  0.428700
+INPUT:0   2.520000   0.000000     0.369600  0.377300  0.428700
+INPUT:0   5.040000   0.000000     0.369600  0.377300  0.428700
+INPUT:0   6.300000   0.000000     0.369600  0.377300  0.428700
+INPUT:0   9.018947   0.000000     0.369600  0.377300  0.428700
+INPUT:0   10.146316   0.000000     0.369600  0.377300  0.428700
+INPUT:0   9.018947   9.018947     0.369600  0.377300  0.428700
+INPUT:0   10.146316   10.146316     0.369600  0.377300  0.428700
+INPUT:0   1.127368   1.127368     0.369600  0.377300  0.428700
+INPUT:0   2.254737   2.254737     0.369600  0.377300  0.428700
+INPUT:0   7.891579   7.891579     0.369600  0.377300  0.428700
+INPUT:0   7.124968   7.124968     0.369600  0.377300  0.428700
+INPUT:0   4.622211   4.622211     0.369600  0.377300  0.428700
+INPUT:0   0.000000   0.000000    0.560000  0.610000
+INPUT:0   3.780000   3.780000    0.560000  0.610000
+INPUT:0   6.300000   6.300000    0.560000  0.610000
+INPUT:0   3.780000   0.000000    0.560000  0.610000
+INPUT:0   7.560000   0.000000    0.560000  0.610000
+INPUT:inserts
+INPUT:0   9.018947   1.127368     0.369600  0.377300  0.428700
+INPUT:0   10.146316   1.127368     0.369600  0.377300  0.428700
+INPUT:0   9.018947   2.254737     0.369600  0.377300  0.428700
+INPUT:0   10.146316   2.254737     0.369600  0.377300  0.428700
+INPUT:0   9.018947   3.382105     0.369600  0.377300  0.428700
+INPUT:0   10.146316   3.382105     0.369600  0.377300  0.428700
+INPUT:0   9.018947   4.509474     0.369600  0.377300  0.428700
+INPUT:0   10.146316   4.509474     0.369600  0.377300  0.428700
+INPUT:0   9.018947   5.636842     0.369600  0.377300  0.428700
+INPUT:0   10.146316   5.636842     0.369600  0.377300  0.428700
+INPUT:0   9.018947   6.764211     0.369600  0.377300  0.428700
+INPUT:0   10.146316   6.764211     0.369600  0.377300  0.428700
+INPUT:0   9.018947   7.891579     0.369600  0.377300  0.428700
+INPUT:0   10.146316   7.891579     0.369600  0.377300  0.428700
+INPUT:0   10.146316   9.018947     0.369600  0.377300  0.428700
+INPUT:0   2.254737   1.127368     0.369600  0.377300  0.428700
+INPUT:0   3.382105   1.127368     0.369600  0.377300  0.428700
+INPUT:0   4.509474   1.127368     0.369600  0.377300  0.428700
+INPUT:0   5.636842   1.127368     0.369600  0.377300  0.428700
+INPUT:0   6.764211   1.127368     0.369600  0.377300  0.428700
+INPUT:0   7.891579   1.127368     0.369600  0.377300  0.428700
+INPUT:0   3.382105   2.254737     0.369600  0.377300  0.428700
+INPUT:0   4.509474   2.254737     0.369600  0.377300  0.428700
+INPUT:0   5.636842   2.254737     0.369600  0.377300  0.428700
+INPUT:0   6.764211   2.254737     0.369600  0.377300  0.428700
+INPUT:0   7.891579   2.254737     0.369600  0.377300  0.428700
+INPUT:0   8.117053   5.073158     0.369600  0.377300  0.428700
+INPUT:0   6.820579   4.636800     0.369600  0.377300  0.428700
+INPUT:0   8.117053   6.200526     0.369600  0.377300  0.428700
+INPUT:0   7.215158   5.636842     0.369600  0.377300  0.428700
+INPUT:0   5.073158   3.156632     0.369600  0.377300  0.428700
+INPUT:0   6.200526   3.156632     0.369600  0.377300  0.428700
+INPUT:0   5.636842   4.058526     0.369600  0.377300  0.428700
+INPUT:0   5.862316   5.106979     0.369600  0.377300  0.428700
+INPUT:0   7.560000   3.780000    0.560000  0.610000
+INPUT:material
+INPUT:3   * background/element material
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:3 2
+INPUT:3 2
+INPUT:3 2
+INPUT:3 2
+INPUT:3 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:1 4 2
+INPUT:3 2
+INPUT:picture
+INPUT:endgeom
+INPUT:azimuthal 3 0.1 2 2
+INPUT:* kh=2 kv=2 -> reflective, required for diagonal symmetry
+INPUT:polar 3
+INPUT:begin
+
+ k-cactus is   1.315642
+ 
+
+TIMING: Module: cpu           0.07 wall          0.07 Overall: cpu           1.71 wall          2.47
+====================================================================================================
+INPUT:POWER 2
+
+CALLING POWER(INPUT_INTERFACE_NO=  2)
+INPUT:POWER 2.212500e+06   * total assembly power (W)
+INPUT:FISSION          * deposit all energy at point of fission
+INPUT:BEGIN
+
+TOTAL REACTOR POWER    2.21 MW
+TOTAL FISSIONS   6.84043E+10
+FLUX NORMALISATION FACTOR   1.27795E+11
+ENERGY PER FISSION  201.87 MeV
+
+TIMING: Module: cpu           0.00 wall          0.00 Overall: cpu           1.71 wall          2.47
+====================================================================================================
+INPUT:EDIT 2
+
+CALLING EDIT(INTERFACE_NO=  2)
+
+INPUT:NORM  2.212500e+06  POWER   * normalise to assembly power (W)
+INPUT:POWERMAP
+INPUT:TOFILE powermap.txt
+INPUT:3 1 2
+INPUT:5 1 5
+INPUT:10 1 8
+INPUT:15 1 11
+INPUT:23 1 14
+INPUT:24 1 17
+INPUT:23 19 20
+INPUT:24 20 23
+INPUT:2 2 26
+INPUT:4 3 29
+INPUT:21 18 32
+INPUT:18 17 35
+INPUT:9 9 38
+INPUT:23 2 51
+INPUT:24 2 54
+INPUT:23 3 57
+INPUT:24 3 60
+INPUT:23 5 63
+INPUT:24 5 66
+INPUT:23 8 69
+INPUT:24 8 72
+INPUT:23 13 75
+INPUT:24 13 78
+INPUT:23 16 81
+INPUT:24 16 84
+INPUT:23 18 87
+INPUT:24 18 90
+INPUT:24 19 93
+INPUT:4 2 96
+INPUT:6 2 99
+INPUT:8 2 102
+INPUT:12 2 105
+INPUT:16 2 108
+INPUT:21 2 111
+INPUT:6 3 114
+INPUT:8 3 117
+INPUT:12 3 120
+INPUT:16 3 123
+INPUT:21 3 126
+INPUT:22 11 129
+INPUT:17 10 132
+INPUT:22 14 135
+INPUT:19 13 138
+INPUT:11 4 141
+INPUT:14 4 144
+INPUT:12 7 147
+INPUT:13 12 150
+INPUT:BEGIN
+************************************************************************************************************************
+INTERFACE    2  EIGENVALUE  1.315642  OVERALL MWd/t   0.0000E+00 BURNUP TIME   0.0000E+00 DAYS
+
+========================================================================================================================
+RUN SET    1
+
+
+NORMALISATION
+-------------
+NORMALISED TO  2.21250E+06 POWER USING FACTOR  1.27795E+17
+
+MAP NORMALISATION
+-----------------
+NORMALISED TO  2.21250E+06 POWER USING FACTOR  1.27795E+17
+
+MATERIAL REACTION RATES
+-----------------------
+                           NUM DENSITY REACTION    ABS         N,GAM       N,2N        FISS        YIELD       POWER                   MW/Te       
+         MATERIAL NUCLIDE  MATL FLUX   GROUPS                                                                                                      
+            1     MATERIAL 9.12664E+16   1:6       1.14302E+17 4.60742E+16 1.76503E+14 6.84043E+16 1.68133E+17 2.21250E+06             13886.      
+ 
+            2     MATERIAL 9.14743E+16   1:6       1.13265E+15 1.13265E+15                                                                         
+ 
+            3     MATERIAL 9.16442E+16   1:6       1.21221E+16 1.21221E+16 7.28250E+07                                                             
+ 
+            4     MATERIAL 9.14174E+16   1:6       2.38705E+14 2.38705E+14 1.62499E+06                                                             
+ 
+ 
+                  REACTOR                1:6       1.27795E+17 5.95677E+16 1.76503E+14 6.84043E+16 1.68133E+17 2.21250E+06                         
+
+FUEL MATERIAL MAP
+-----------------
+
+SECTION  1
+Y\X     2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18  X/Y
+ 17                                                                                                                     1   17
+ 12                                                                                  1                                      12
+ 10                                                                                                              1          10
+  9                                                      1                                                                   9
+  7                                                                           1                                              7
+  4                                                                    1                    1                                4
+  3                   1             1             1                           1                           1                  3
+  2     1             1             1             1                           1                           1                  2
+  1            1             1                                  1                                  1                         1
+Y/X     2      3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18  X\Y
+
+SECTION  2
+Y\X    19     20     21     22     23     24  X/Y
+ 20                                        1   20
+ 19                                 1      1   19
+ 18                   1             1      1   18
+ 16                                 1      1   16
+ 14                          1                 14
+ 13     1                           1      1   13
+ 11                          1                 11
+  8                                 1      1    8
+  5                                 1      1    5
+  3                   1             1      1    3
+  2                   1             1      1    2
+  1                                 1      1    1
+Y/X    19     20     21     22     23     24  X\Y
+
+POWER MAP
+---------
+ Values relative to a mean pin power of  4.70745E+04 WATTS
+
+SECTION  1
+Y\X      2        3        4        5        6        7        8        9       10       11       12       13       14   X/Y
+ 20                                                                                                                       20
+ 19                                                                                                                       19
+ 18                                                                                                                       18
+ 17                                                                                                                       17
+ 16                                                                                                                       16
+ 15                                                                                                                       15
+ 14                                                                                                                       14
+ 13                                                                                                                       13
+ 12                                                                                                       1.1641          12
+ 11                                                                                                                       11
+ 10                                                                                                                       10
+  9                                                                   0.5942                                               9
+  8                                                                                                                        8
+  7                                                                                              1.1496                    7
+  6                                                                                                                        6
+  5                                                                                                                        5
+  4                                                                                     1.1532                     1.1528  4
+  3                      0.5794            1.1762            1.1570                              1.1374                    3
+  2    0.5822            1.1586            1.1769            1.1677                              1.1555                    2
+  1             0.5919            0.5906                                       0.5913                                      1
+Y/X      2        3        4        5        6        7        8        9       10       11       12       13       14   X\Y
+
+SECTION  2
+Y\X     15       16       17       18       19       20       21       22       23       24   X/Y
+ 20                                                                                     0.5794 20
+ 19                                                                            0.5750   1.1548 19
+ 18                                                          0.5813            1.1518   1.1533 18
+ 17                               0.5947                                                       17
+ 16                                                                            1.1467   1.1540 16
+ 15                                                                                            15
+ 14                                                                   1.1426                   14
+ 13                                        1.1698                              1.1332   1.1506 13
+ 12                                                                                            12
+ 11                                                                   1.1512                   11
+ 10                      1.1829                                                                10
+  9                                                                                             9
+  8                                                                            1.1562   1.1540  8
+  7                                                                                             7
+  6                                                                                             6
+  5                                                                            1.1740   1.1570  5
+  4                                                                                             4
+  3             1.1569                                       1.1744            1.1553   1.1544  3
+  2             1.1682                                       1.1818            1.1569   1.1543  2
+  1    0.5914                                                                  0.5857   0.5792  1
+Y/X     15       16       17       18       19       20       21       22       23       24   X\Y
+
+EDIT completed
+
+
+TIMING: Module: cpu           0.00 wall          0.00 Overall: cpu           1.71 wall          2.47
+====================================================================================================
+INPUT:STOP
+
+Finished WIMS
