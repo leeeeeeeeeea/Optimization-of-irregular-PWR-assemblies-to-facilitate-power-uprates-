@@ -1,0 +1,27 @@
+ WIMS 
+These files all need to be in the same folder. It can (and probably should) be different from the Serpent folder, which is why some files here are twins of the ones in the Serpent folder. 
+ 
+get_pins.py 
+ 
+WIMS :  
+BL324_1_8_WIMSmaker.py 
+input 
+runwims 
+output 
+powermap.txt 
+ 
+Reading out WIMS results : 
+heat_map.py 
+ 
+COBRA :  
+cobra_smallopti.py 
+cobra_out.py 
+ 
+Optimization :  
+master_WIMS_test.py 
+master_WIMS_simult_full.py (with scipy.optimize) 
+master_WIMS_simult_full_GA.py (an attempt at a genetic algorithm) 
+ 
+Result :  
+Optimized assembly simult WIMS full.txt 
+The pins list here is copied in the Test_WIMS_opti_full_result python file in the Serpent folder, since this supposedly optimal configuration was tested using Serpent. 
